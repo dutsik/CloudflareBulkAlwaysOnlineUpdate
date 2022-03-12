@@ -4,24 +4,26 @@
 **Step 1**: clone the project with git
 
 ```sh
-$ git clone https://github.com/rogervila/laravel-default-project.git
+$ git clone https://github.com/dutsik/CloudflareBulkAlwaysOnlineUpdate.git
 ```
 
-**Step 2**: go into the `laravel-default-project` folder and run composer
+**Step 2**: go into the `CloudflareBulkAlwaysOnlineUpdate` folder and run composer
 ```sh
-$ cd laravel-default-project
+$ cd CloudflareBulkAlwaysOnlineUpdate
 $ composer install
 ```
 
-**Step 2.1**: if you want to get the last vendor versions, run composer update
-```sh
-$ composer update
+**Step 3**: update the creds.php and run the script
+
+```php
+$ php script.php
 ```
 
-**Step 3**: install node modules with [yarn](https://yarnpkg.com/) or npm
+### Alternatively run it with docker
+
 ```sh
-# with yarn
-$ yarn
-# with npm 
-$ npm install
+$ docker run --rm -it   --volume $PWD:/app   composer install
+```
+```sh
+$ docker run -ti --init --rm -v $(pwd):/app/ php:8.1-cli php /app/script.php
 ```

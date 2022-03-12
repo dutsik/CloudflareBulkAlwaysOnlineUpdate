@@ -1,0 +1,4 @@
+<?php
+$authemail = "";
+$authkey   = "";
+$accountId = '';
